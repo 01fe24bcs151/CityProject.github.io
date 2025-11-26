@@ -1,67 +1,62 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tejas Keri | Portfolio</title>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
-
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Tejas BK | Creative Portfolio</title>
 <style>
-/* Reset default margin and padding */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-/* Global Styles */
 body {
     font-family: 'Poppins', sans-serif;
-    background-color: #f5f5f5;
+    background: #f5f5f5;
     margin: 0;
     padding: 20px;
     display: flex;
     justify-content: center;
-    align-items: flex-start;
-    min-height: 100vh;
 }
-
-/* Main Container */
-section {
-    background-color: white;
-    padding: 2rem;
-    width: 90%;
-    max-width: 800px;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
-    border-radius: 8px;
-    margin-top: 30px;
+.container {
+    max-width: 900px;
+    width: 100%;
 }
-
-/* Header */
 header {
     background-color: #4CAF50;
     color: white;
     padding: 2rem;
     border-radius: 8px;
-    margin-bottom: 1.5rem;
+    text-align: center;
+    margin-bottom: 2rem;
 }
-
 header h1 {
-    font-size: 2rem;
     margin: 0;
+    font-size: 2rem;
 }
-
 header p {
-    margin: 1rem 0 0;
+    margin-top: 0.5rem;
 }
 
-/* Section Titles */
+.cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 20px;
+}
+
+.card {
+    background: white;
+    padding: 1.5rem;
+    border-radius: 12px;
+    border: 1px solid #e0e0e0;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    transition: 0.3s;
+}
+.card:hover {
+    transform: translateY(-5px);
+    border-color: #4CAF50;
+}
+
 h2 {
     color: #4CAF50;
     margin-bottom: 1rem;
 }
 
-/* List Items */
 ul {
     list-style: none;
     padding: 0;
@@ -74,86 +69,119 @@ ul li {
     border-radius: 5px;
 }
 
-/* Links */
 a {
     color: #4CAF50;
     text-decoration: none;
     font-weight: bold;
 }
-
 a:hover {
     text-decoration: underline;
 }
 
-/* Definition List */
-dl dt {
-    font-weight: bold;
-    color: #333;
-    margin-top: 1rem;
+/* Skill Bars */
+.skill {
+    margin: 10px 0;
+}
+.skill-name {
+    margin-bottom: 5px;
+    font-weight: 500;
+}
+.bar {
+    background: #ddd;
+    border-radius: 5px;
+    overflow: hidden;
+    height: 15px;
+}
+.fill {
+    height: 100%;
+    background: #4CAF50;
+    width: 0;
+    transition: width 1s ease;
 }
 
-dl dd {
-    margin-left: 1.5rem;
-    color: #666;
-}
-
-/* Blockquote */
 blockquote {
     font-style: italic;
     color: #555;
     border-left: 4px solid #4CAF50;
     padding-left: 1rem;
-    margin-top: 2rem;
-}
-
-/* Responsive Design */
-@media (max-width: 600px) {
-    section {
-        padding: 1.5rem;
-    }
-
-    header {
-        padding: 1.5rem;
-    }
+    margin-top: 1rem;
 }
 </style>
 </head>
 <body>
-
-<section>
+<div class="container">
     <header>
-        <h1>👨‍💻 Tejas Keri</h1>
-        <p>A tech enthusiast exploring coding, web development, and creative design.</p>
+        <h1>👨‍💻 Tejas B.K</h1>
+        <p>Passionate about coding, problem-solving & creative UI</p>
     </header>
 
-    <h2>🚀 Current Projects</h2>
-    <ul>
-        <li>Building advanced UI with CSS + JS</li>
-        <li>Backend learning — DBMS + OS</li>
-        <li>Personal portfolio design</li>
-    </ul>
+    <div class="cards">
 
-    <h2>🧠 Technical Skills</h2>
-    <dl>
-        <dt>Languages:</dt>
-        <dd>C, Python, JavaScript, SQL</dd>
-        <dt>Tools & Platforms:</dt>
-        <dd>Git, GitHub, Linux, VS Code</dd>
-        <dt>Concepts:</dt>
-        <dd>OOP, Data Structures, OS, DBMS</dd>
-    </dl>
+        <div class="card">
+            <h2>🚀 Projects</h2>
+            <ul>
+                <li><strong>Project 1:</strong> Algorithm Visualizer</li>
+                <li><strong>Project 2:</strong> Web App Dashboard</li>
+            </ul>
+        </div>
 
-    <h2>🔗 Connect with Me</h2>
-    <ul>
-        <li><a href="https://github.com/Tejas-Keri">GitHub</a></li>
-        <li><a href="#">LinkedIn</a></li>
-        <li><a href="mailto:tejas@example.com">Email</a></li>
-    </ul>
+        <div class="card">
+            <h2>🧠 Skills</h2>
+            <div class="skill">
+                <div class="skill-name">C++</div>
+                <div class="bar"><div class="fill" style="width:90%"></div></div>
+            </div>
+            <div class="skill">
+                <div class="skill-name">Python</div>
+                <div class="bar"><div class="fill" style="width:85%"></div></div>
+            </div>
+            <div class="skill">
+                <div class="skill-name">JavaScript</div>
+                <div class="bar"><div class="fill" style="width:75%"></div></div>
+            </div>
+            <div class="skill">
+                <div class="skill-name">React.js</div>
+                <div class="bar"><div class="fill" style="width:70%"></div></div>
+            </div>
+        </div>
 
-    <blockquote>
-        “Code is like humor. When you have to explain it, it’s bad.”
-    </blockquote>
-</section>
+        <div class="card">
+            <h2>🌐 Connect</h2>
+            <ul>
+                <li><a href="https://github.com/Tejas-Keri" target="_blank">GitHub</a></li>
+                <li><a href="#">LinkedIn</a></li>
+                <li><a href="mailto:tejas@example.com">Email</a></li>
+            </ul>
+        </div>
 
+        <div class="card">
+            <h2>📄 Portfolio Info</h2>
+            <ul>
+                <li>Course: Algorithmic Problem Solving</li>
+                <li>SRN: Your SRN</li>
+                <li>Instructor: Instructor Name</li>
+                <li>University: Your University</li>
+                <li>Topic: Google</li>
+            </ul>
+        </div>
+
+        <div class="card">
+            <blockquote>“The only way to do great work is to love what you do.” – Steve Jobs</blockquote>
+        </div>
+
+    </div>
+</div>
+
+<script>
+    // Animate skill bars
+    const fills = document.querySelectorAll('.fill');
+    fills.forEach(fill => {
+        const width = fill.style.width;
+        fill.style.width = '0';
+        setTimeout(() => {
+            fill.style.width = width;
+        }, 100);
+    });
+</script>
 </body>
 </html>
