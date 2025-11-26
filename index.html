@@ -16,12 +16,14 @@ export default function App() {
         >
           Home
         </Button>
+
         <Button
           variant={page === "about" ? "default" : "secondary"}
           onClick={() => setPage("about")}
         >
           About
         </Button>
+
         <Button
           variant={page === "contact" ? "default" : "secondary"}
           onClick={() => setPage("contact")}
@@ -53,7 +55,10 @@ function About() {
     <Card className="p-4 rounded-2xl shadow">
       <CardContent>
         <h2 className="text-xl font-bold mb-2">About Us</h2>
-        <p className="text-base mb-3">We are a dedicated project team working together.</p>
+        <p className="text-base mb-3">
+          We are a dedicated project team working together.
+        </p>
+
         <h3 className="text-lg font-semibold mb-1">Team Members:</h3>
         <ul className="list-disc pl-6 text-base">
           <li>Ketan</li>
