@@ -7,7 +7,7 @@
 
 <style>
   body {
-    background: #05060a;
+    background: #e9eef5;
     margin: 0;
     font-family: "Poppins", sans-serif;
     min-height: 100vh;
@@ -17,49 +17,76 @@
     align-items: center;
   }
 
+  h2 {
+    text-align: center;
+    color: #0c1225;
+    margin-bottom: 18px;
+    font-size: 1.7rem;
+  }
+
   .grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
     gap: 25px;
     padding: 40px;
     width: 90%;
-    max-width: 900px;
+    max-width: 1050px;
   }
 
   .item {
-    background: #12141d;
-    border: 1px solid #222634;
-    border-radius: 12px;
-    padding: 22px;
+    background: #ffffff;
+    border: 1px solid #ccd4e2;
+    border-radius: 14px;
+    padding: 24px;
     font-size: 1.15rem;
-    transition: transform .25s ease, box-shadow .25s ease, background .25s ease;
+    transition: transform .22s ease, box-shadow .22s ease;
     text-align: center;
     user-select: none;
     cursor: pointer;
+    color: #182037;
   }
 
   .item:hover {
-    transform: scale(1.15);
-    background: #1b1f2b;
-    box-shadow: 0px 0px 18px rgba(0, 200, 255, .35);
+    transform: scale(1.12);
+    box-shadow: 0px 0px 18px rgba(0, 140, 255, .28);
+  }
+
+  a {
+    color: #0041c2;
+    text-decoration: none;
+    font-weight: 600;
+  }
+
+  a:hover {
+    text-decoration: underline;
   }
 </style>
 
 </head>
 <body>
 
-<div class="grid">
-  <div class="item">🔹 address</div>
-  <div class="item">🔸 DOB</div>
-  <div class="item">🔷 email</div>
-  <div class="item">🔶 phone</div>
-  <div class="item">🟣 College</div>
-  <div class="item">🟩 city</div>
-  <div class="item">🔵 domain</div>
+<div>
+  <h2>🚀 Tejas Keri — Portfolio Dashboard</h2>
+  <div class="grid">
+    <div class="item">👤 About Me<br>Software & Tech Enthusiast</div>
+    <div class="item">🎯 Domain<br>Web Dev, AI, UI/UX</div>
+    <div class="item">📧 Email<br><a href="mailto:your@email.com">your@email.com</a></div>
+    <div class="item">🌍 City<br>Your Location</div>
+    <div class="item">🎓 Education<br>B.Tech / CS</div>
+    <div class="item">💼 Experience<br>Projects + Internships</div>
+    
+    <div class="item">🧠 Skills<br>HTML • CSS • JS • Python • Git</div>
+    <div class="item">🛠 Tools<br>VS Code • GitHub • Figma</div>
+
+    <div class="item">🔥 GitHub<br><a href="https://github.com/yourname">github.com/yourname</a></div>
+    <div class="item">💼 LinkedIn<br><a href="https://linkedin.com/in/yourname">linkedin.com/in/yourname</a></div>
+    <div class="item">▶️ YouTube<br><a href="https://youtube.com/@yourname">@yourname</a></div>
+    <div class="item">📱 Phone<br>+91 — — — — — —</div>
+  </div>
 </div>
 
 <script>
-  // future-ready JS if you want more effects later
+  // reserved space for future animations
 </script>
 
 </body>
