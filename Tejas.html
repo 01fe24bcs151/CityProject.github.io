@@ -3,91 +3,84 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>Tejas's GitHub Portfolio</title>
+<title>Tejas — Portfolio</title>
 
 <style>
   body {
-    background: #e9eef5;
     margin: 0;
     font-family: "Poppins", sans-serif;
-    min-height: 100vh;
-    overflow-x: hidden;
+    background: linear-gradient(145deg, #fafafa, #dbdee3);
     display: flex;
     justify-content: center;
     align-items: center;
+    min-height: 100vh;
+    color: #1d1f24;
   }
 
   h2 {
     text-align: center;
-    color: #0c1225;
-    margin-bottom: 18px;
-    font-size: 1.7rem;
+    font-weight: 500;
+    letter-spacing: 1px;
+    margin-bottom: 28px;
+    font-size: 2rem;
   }
 
   .grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    gap: 25px;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 28px;
     padding: 40px;
     width: 90%;
-    max-width: 1050px;
+    max-width: 1100px;
   }
 
   .item {
-    background: #ffffff;
-    border: 1px solid #ccd4e2;
-    border-radius: 14px;
-    padding: 24px;
+    background: rgba(255,255,255,0.6);
+    backdrop-filter: blur(14px);
+    border-radius: 18px;
+    padding: 26px;
     font-size: 1.15rem;
-    transition: transform .22s ease, box-shadow .22s ease;
+    transition: transform .25s ease, box-shadow .25s ease, background .25s ease;
     text-align: center;
-    user-select: none;
     cursor: pointer;
-    color: #182037;
+    border: 1px solid rgba(180,180,180,0.25);
   }
 
   .item:hover {
-    transform: scale(1.12);
-    box-shadow: 0px 0px 18px rgba(0, 140, 255, .28);
+    transform: translateY(-8px);
+    background: rgba(255,255,255,0.9);
+    box-shadow: 0px 15px 28px rgba(0,0,0,0.08);
   }
 
   a {
-    color: #0041c2;
+    color: #1c55d4;
     text-decoration: none;
-    font-weight: 600;
+    font-weight: 500;
   }
 
   a:hover {
     text-decoration: underline;
   }
-</style>
 
+</style>
 </head>
 <body>
 
 <div>
-  <h2>🚀 Tejas Keri — Portfolio Dashboard</h2>
+  <h2>Tejas Keri</h2>
   <div class="grid">
-    <div class="item">👤 About Me<br>Software & Tech Enthusiast</div>
-    <div class="item">🎯 Domain<br>Web Dev, AI, UI/UX</div>
-    <div class="item">📧 Email<br><a href="mailto:your@email.com">your@email.com</a></div>
-    <div class="item">🌍 City<br>Your Location</div>
-    <div class="item">🎓 Education<br>B.Tech / CS</div>
-    <div class="item">💼 Experience<br>Projects + Internships</div>
-    
-    <div class="item">🧠 Skills<br>HTML • CSS • JS • Python • Git</div>
-    <div class="item">🛠 Tools<br>VS Code • GitHub • Figma</div>
-
+    <div class="item">👤 About Me<br>Minimal & Aesthetic Coder</div>
+    <div class="item">🧩 Role<br>Software Developer</div>
+    <div class="item">✨ Focus<br>AI • Algorithms • UI/UX</div>
+    <div class="item">🎓 Education<br>B.Tech — CS</div>
+    <div class="item">🧠 Skills<br>HTML • CSS • JS • C • C++ • Python</div>
+    <div class="item">🛠 Tools<br>VS Code • Git • GitHub • Figma</div>
     <div class="item">🔥 GitHub<br><a href="https://github.com/yourname">github.com/yourname</a></div>
     <div class="item">💼 LinkedIn<br><a href="https://linkedin.com/in/yourname">linkedin.com/in/yourname</a></div>
-    <div class="item">▶️ YouTube<br><a href="https://youtube.com/@yourname">@yourname</a></div>
-    <div class="item">📱 Phone<br>+91 — — — — — —</div>
+    <div class="item">📧 Email<br><a href="mailto:your@email.com">your@email.com</a></div>
+    <div class="item">🎥 YouTube<br><a href="https://youtube.com/@yourname">@yourname</a></div>
   </div>
 </div>
-
-<script>
-  // reserved space for future animations
-</script>
 
 </body>
 </html>
