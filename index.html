@@ -30,21 +30,18 @@
       animation: navSlide 1s ease-out;
       box-shadow: 0px 4px 12px rgba(0,0,0,0.3);
     }
-
     @keyframes navSlide {
       from { transform: translateY(-80px); opacity: 0; }
       to { transform: translateY(0); opacity: 1; }
     }
-
     nav a {
       color: white;
       text-decoration: none;
-      margin-left: 25px;
+      margin-left: 22px;
       padding: 7px 14px;
       border-radius: 6px;
       transition: 0.4s ease;
     }
-
     nav a:hover {
       background: #007bff;
       transform: scale(1.12);
@@ -62,6 +59,9 @@
       text-align: center;
       margin: 40px 0;
       animation: fadeIn 1.5s ease-out;
+      box-shadow: 0px 10px 25px rgba(0,0,0,0.25);
+      position: relative;
+      overflow: hidden;
     }
 
     @keyframes fadeIn {
@@ -69,38 +69,36 @@
       to { opacity: 1; transform: scale(1); }
     }
 
-    /* LOGO BAR */
-    .logo-bar {
+    /* LOGO STRIP */
+    .logo-strip {
       display: flex;
       justify-content: center;
-      gap: 40px;
-      margin: 20px 0 10px;
+      align-items: center;
+      gap: 60px;
+      margin: 20px 0 35px;
       animation: fadeInLogos 1.8s ease-out;
     }
-
     @keyframes fadeInLogos {
       0% { opacity: 0; transform: translateY(30px); }
       100% { opacity: 1; transform: translateY(0); }
     }
 
-    .logo-bar img {
-      width: 90px;
-      height: 90px;
+    .logo-strip img {
+      width: 85px;
+      height: 85px;
       object-fit: contain;
-      filter: drop-shadow(0px 0px 10px rgba(0,0,0,0.3));
       transition: 0.4s ease;
+      filter: drop-shadow(0 0 6px rgba(0,0,0,0.3));
       animation: logoFloat 4s infinite ease-in-out;
     }
-
-    .logo-bar img:hover {
-      transform: scale(1.2);
-      filter: drop-shadow(0px 0px 15px rgba(0,0,0,0.6));
-    }
-
     @keyframes logoFloat {
       0% { transform: translateY(0px); }
-      50% { transform: translateY(-10px); }
+      50% { transform: translateY(-8px); }
       100% { transform: translateY(0px); }
+    }
+    .logo-strip img:hover {
+      transform: scale(1.18);
+      filter: drop-shadow(0 0 15px rgba(0,0,0,0.6));
     }
 
     /* MOTTO BLOCK */
@@ -128,6 +126,12 @@
       text-shadow: 0px 0px 20px rgba(255,255,255,0.9);
     }
 
+    .motto-sub {
+      opacity: 0.9;
+      margin-top: 10px;
+    }
+
+    /* SECTION BOX */
     .section-box {
       background: white;
       padding: 30px;
@@ -136,13 +140,12 @@
       box-shadow: 0px 8px 20px rgba(0,0,0,0.15);
       animation: rise 1.2s ease-out;
     }
-
     @keyframes rise {
       from { opacity: 0; transform: translateY(40px); }
       to { opacity: 1; transform: translateY(0); }
     }
 
-    /* TEAM TITLE */
+    /* TEAM SECTION */
     .team-title {
       font-size: 32px;
       text-align: center;
@@ -150,7 +153,6 @@
       margin-bottom: 25px;
     }
 
-    /* TEAM GRID */
     .team-grid {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
@@ -178,7 +180,7 @@
       box-shadow: 0px 15px 30px rgba(0,0,0,0.4);
     }
 
-    /* Gradient colors */
+    /* COLORS */
     .card1 { background: linear-gradient(135deg, #6a11cb, #2575fc); }
     .card2 { background: linear-gradient(135deg, #ff512f, #dd2476); }
     .card3 { background: linear-gradient(135deg, #11998e, #38ef7d); }
@@ -186,17 +188,15 @@
 
     .btn {
       padding: 12px 20px;
-      background: rgba(255,255,255,0.2);
-      border: 2px solid rgba(255,255,255,0.4);
+      background: rgba(255,255,255,0.25);
       color: white;
       border-radius: 10px;
       text-decoration: none;
       transition: 0.35s ease;
       display: inline-block;
     }
-
     .btn:hover {
-      background: rgba(255,255,255,0.45);
+      background: rgba(255,255,255,0.5);
       transform: scale(1.12);
     }
 
@@ -216,7 +216,6 @@
   <nav>
     <h2>DAA City Design</h2>
     <div>
-      <a href="#intro">DAA Intro</a>
       <a href="#motto">Motto</a>
       <a href="#team">Team</a>
     </div>
@@ -234,13 +233,10 @@
       <p><b>Topic:</b> Smart City Design Using Algorithms</p>
     </div>
 
-    <!-- LOGO BAR -->
-    <div class="logo-bar">
-      <!-- You can replace these logo links anytime -->
+    <!-- LOGO STRIP (3 logos) -->
+    <div class="logo-strip">
       <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/0f/K.L.E._Society_Logo.png/600px-K.L.E._Society_Logo.png" alt="KLE University Logo">
-
-      <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/6a/Smart_City_Logo.png/480px-Smart_City_Logo.png" alt="City Project Logo">
-
+      <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/6a/Smart_City_Logo.png/480px-Smart_City_Logo.png" alt="City Logo">
       <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/21/Algorithms_Icon.png/480px-Algorithms_Icon.png" alt="DAA Logo">
     </div>
 
@@ -249,30 +245,21 @@
       <h2 class="motto-title">
         Build an Knowledge Powered by Innovation, Sustained by Nature
       </h2>
+
       <p class="motto-sub">
         Our city blends technology, creativity, and environmental harmony 
         into a unified vision for a sustainable and intelligent future.
       </p>
     </div>
 
-    <!-- INTRO SECTION -->
-    <div id="intro" class="section-box">
-      <h2>Introduction to DAA</h2>
-      <p>
-        Design and Analysis of Algorithms (DAA) focuses on creating efficient and optimized solutions 
-        for real-world computational problems. It includes Divide & Conquer, Greedy Algorithms, 
-        Dynamic Programming, Graph Algorithms, and more.
-      </p>
-    </div>
-
-    <!-- CITY DESIGN SECTION -->
+    <!-- HOW DAA HELPS -->
     <div class="section-box">
-      <h2>How DAA Helps in City Design</h2>
+      <h2>How Our City Uses Algorithms</h2>
       <p>
         ✔ Graph Algorithms for road planning<br>
-        ✔ Greedy Algorithms for facility placement<br>
-        ✔ Dynamic Programming for cost optimization<br>
-        ✔ Search Algorithms for traffic routing<br>
+        ✔ Greedy Algorithms for resource placement<br>
+        ✔ Dynamic Programming for space optimization<br>
+        ✔ Search Algorithms for routing & traffic systems<br>
       </p>
     </div>
 
