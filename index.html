@@ -54,9 +54,7 @@
     .container { max-width: 1100px; margin: auto; padding: 25px; }
 
 
-    /* ===============================
-       UPDATED HEADER BLOCK WITH MORE ANIMATION
-       =============================== */
+    /* HEADER BLOCK WITH ANIMATION */
     .header {
       background: linear-gradient(120deg, #003366, #0077cc);
       color: white;
@@ -67,33 +65,28 @@
       position: relative;
       overflow: hidden;
 
-      /* NEW ANIMATIONS ADDED */
       animation: headerGlow 4s ease-in-out infinite alternate,
                  headerFloat 6s ease-in-out infinite,
                  headerTilt 5s ease-in-out infinite alternate;
       box-shadow: 0px 12px 35px rgba(0,0,0,0.35);
     }
 
-    /* Soft floating up–down effect */
     @keyframes headerFloat {
       0% { transform: translateY(0px); }
       50% { transform: translateY(-12px); }
       100% { transform: translateY(0px); }
     }
 
-    /* Glow animation on border */
     @keyframes headerGlow {
       0% { box-shadow: 0 0 20px #005c99; }
       100% { box-shadow: 0 0 40px #33bbff; }
     }
 
-    /* Slight parallax rotation effect */
     @keyframes headerTilt {
       0% { transform: rotateX(0deg) rotateY(0deg); }
       100% { transform: rotateX(3deg) rotateY(-3deg); }
     }
 
-    /* Moving shine overlay */
     .header::after {
       content: "";
       position: absolute;
@@ -112,7 +105,7 @@
     }
 
 
-    /* MOTTO BLOCK (same as before) */
+    /* MOTTO BLOCK */
     .motto-block {
       margin: 40px 0;
       padding: 35px;
@@ -151,20 +144,8 @@
       animation: shineMove 5s infinite linear;
     }
 
-    .motto-logo {
-      width: 120px;
-      height: 120px;
-      object-fit: contain;
-      margin-bottom: 15px;
-      animation: logoPulse 3s infinite ease-in-out;
-      filter: drop-shadow(0px 0px 12px rgba(255,255,255,0.7));
-    }
+    /* City logo removed here */
 
-    @keyframes logoPulse {
-      0% { transform: scale(1); }
-      50% { transform: scale(1.13); }
-      100% { transform: scale(1); }
-    }
 
     .motto-title {
       font-size: 26px;
@@ -192,7 +173,34 @@
       to {opacity: 0.9;}
     }
 
-    /* INFO SECTIONS */
+
+    /* HOW DAA HELPS — ADDED NEW ANIMATION */
+    #usage {
+      background: white;
+      padding: 30px;
+      border-radius: 16px;
+      margin-bottom: 40px;
+      box-shadow: 0px 8px 20px rgba(0,0,0,0.15);
+      position: relative;
+      overflow: hidden;
+
+      animation: helpSlide 1.5s ease-out,
+                 helpGlow 4s infinite alternate ease-in-out;
+    }
+
+    @keyframes helpSlide {
+      0% { opacity: 0; transform: translateX(-120px) scale(0.95); }
+      60% { opacity: 1; transform: translateX(10px) scale(1.02); }
+      100% { opacity: 1; transform: translateX(0px) scale(1); }
+    }
+
+    @keyframes helpGlow {
+      0% { box-shadow: 0 0 12px rgba(0, 102, 204, 0.25); }
+      100% { box-shadow: 0 0 28px rgba(0, 153, 255, 0.55); }
+    }
+
+
+    /* SECTION BOXES */
     .section-box {
       background: white;
       padding: 30px;
@@ -210,19 +218,14 @@
     }
 
 
-    /* TEAM TITLE */
+    /* TEAM TITLE — GLOW REMOVED */
     .team-title {
       font-size: 32px;
       text-align: center;
       color: #003366;
       margin-bottom: 25px;
-      animation: titleGlow 2s infinite alternate ease-in-out;
     }
 
-    @keyframes titleGlow {
-      0% { text-shadow: 0 0 10px #66b3ff; }
-      100% { text-shadow: 0 0 20px #0077ff; }
-    }
 
     /* TEAM GRID */
     .team-grid {
@@ -259,7 +262,7 @@
       100% { box-shadow: 0 0 28px rgba(255,255,255,0.9); }
     }
 
-    /* UNIQUE TEAM COLORS */
+    /* UNIQUE TEAM CARD COLORS */
     .card1 { background: linear-gradient(135deg, #6a11cb, #2575fc); animation: gradientFlow 6s infinite; }
     .card2 { background: linear-gradient(135deg, #ff512f, #dd2476); animation: gradientFlow 6s infinite; }
     .card3 { background: linear-gradient(135deg, #11998e, #38ef7d); animation: gradientFlow 6s infinite; }
@@ -271,6 +274,7 @@
       100% { background-position: 0% 50%; }
     }
 
+    /* BUTTON */
     .btn {
       padding: 12px 20px;
       background: rgba(255,255,255,0.2);
@@ -333,7 +337,7 @@
 
   <div class="container">
 
-    <!-- HEADER WITH NEW ANIMATIONS -->
+    <!-- HEADER -->
     <div class="header">
       <h1>City Design Project</h1>
       <p><b>Course:</b> Design and Analysis of Algorithms (DAA)</p>
@@ -345,7 +349,6 @@
 
     <!-- MOTTO BLOCK -->
     <div id="motto" class="motto-block">
-      <img src="logo.png" alt="City Logo" class="motto-logo">
 
       <h2 class="motto-title">
         Build a Knowledge City Powered by Innovation, Sustained by Nature 🌿✨
@@ -368,6 +371,7 @@
       </p>
     </div>
 
+    <!-- TEAM -->
     <h2 id="team" class="team-title">Project Team Members</h2>
 
     <div class="team-grid">
