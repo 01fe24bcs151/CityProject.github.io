@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Swyambu Boli | Portfolio</title>
+
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; font-family: "Poppins", sans-serif; }
+
+    body {
+      background: linear-gradient(145deg, #dfe9f3, #ffffff);
+      overflow-x: hidden;
+    }
+
+    /* NAVBAR */
+    nav {
+      width: 100%;
+      background: #003366;
+      padding: 16px 30px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      color: white;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      box-shadow: 0px 4px 12px rgba(0,0,0,0.3);
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      margin-left: 20px;
+      padding: 8px 14px;
+      border-radius: 6px;
+      transition: 0.3s ease;
+    }
+
+    nav a:hover {
+      background: rgba(255,255,255,0.15);
+      transform: translateY(-3px);
+    }
+
+    .container { max-width: 1100px; margin: auto; padding: 30px; }
+
+    /* HEADER */
+    .header {
+      background: linear-gradient(120deg, #003366, #0077cc);
+      color: white;
+      padding: 40px 30px;
+      border-radius: 18px;
+      text-align: center;
+      margin-bottom: 45px;
+      box-shadow: 0px 10px 25px rgba(0,0,0,0.25);
+      animation: fadeIn 1.2s ease-out;
+    }
+
+    @keyframes fadeIn {
+      0% { opacity: 0; transform: translateY(30px); }
+      100% { opacity: 1; transform: translateY(0); }
+    }
+
+    /* GRID */
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(290px, 1fr));
+      gap: 25px;
+    }
+
+    .card {
+      background: white;
+      padding: 22px;
+      border-radius: 16px;
+      box-shadow: 0px 10px 25px rgba(0,0,0,0.12);
+      transition: 0.35s ease;
+      border-left: 6px solid #0077cc;
+      opacity: 0;
+      transform: translateY(40px);
+      animation: cardRise 1s forwards ease-out;
+    }
+
+    @keyframes cardRise {
+      0% { opacity: 0; transform: translateY(40px); }
+      100% { opacity: 1; transform: translateY(0); }
+    }
+
+    .card:hover {
+      transform: translateY(-12px) scale(1.03);
+      box-shadow: 0px 16px 35px rgba(0,0,0,0.25);
+    }
+
+    .card h3 {
+      font-size: 20px;
+      margin-bottom: 8px;
+      color: #003366;
+      font-weight: 600;
+    }
+
+    .algo {
+      font-size: 14px;
+      font-weight: bold;
+      color: #0077cc;
+      margin-bottom: 5px;
+    }
+
+    .desc {
+      font-size: 14px;
+      opacity: 0.9;
+    }
+
+    /* BACK BUTTON */
+    .back-btn {
+      display: inline-block;
+      margin: 45px auto 30px;
+      padding: 12px 22px;
+      background: #003366;
+      color: white;
+      font-size: 16px;
+      border-radius: 10px;
+      text-decoration: none;
+      transition: 0.3s ease;
+      box-shadow: 0px 6px 16px rgba(0,0,0,0.2);
+    }
+
+    .back-btn:hover {
+      background: #0055aa;
+      transform: translateY(-4px);
+      box-shadow: 0px 10px 25px rgba(0,0,0,0.3);
+    }
+
+    /* FOOTER */
+    footer {
+      text-align: center;
+      padding: 20px;
+      background: #003366;
+      color: white;
+      margin-top: 25px;
+      border-radius: 12px;
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- NAVBAR -->
+  <nav>
+    <h2>Swyambu Boli</h2>
+    <div>
+      <a href="index.html">Home</a>
+    </div>
+  </nav>
+
+  <div class="container">
+
+    <!-- HEADER -->
+    <div class="header">
+      <h1>Smart City, Environment & Sensor Analytics Projects</h1>
+      <p>These problems focus on sustainability, pollution control, climate prediction, safety analytics, and environmental optimization.</p>
+    </div>
+
+    <!-- GRID -->
+    <div class="grid">
+
+      <div class="card">
+        <h3>1. Air Quality Prediction Network</h3>
+        <p class="algo">Algorithm: Regression + DP Smoothing</p>
+        <p class="desc">Predict AQI values using historical multi-sensor data.</p>
+      </div>
+
+      <div class="card">
+        <h3>2. Smart Waste Segregation Automation</h3>
+        <p class="algo">Algorithm: Rule-Based Decision Tree</p>
+        <p class="desc">Automatically classify waste into categories for recycling.</p>
+      </div>
+
+      <div class="card">
+        <h3>3. Noise Barrier Placement Optimization</h3>
+        <p class="algo">Algorithm: Greedy / DP</p>
+        <p class="desc">Find minimum barriers needed to reduce sound pollution.</p>
+      </div>
+
+      <div class="card">
+        <h3>4. Flood-Susceptible Zone Detection</h3>
+        <p class="algo">Algorithm: DFS + Elevation Mapping</p>
+        <p class="desc">Identify low-lying areas vulnerable to flooding.</p>
+      </div>
+
+      <div class="card">
+        <h3>5. Renewable Energy Distribution</h3>
+        <p class="algo">Algorithm: Dynamic Programming</p>
+        <p class="desc">Distribute available solar/wind energy efficiently across the grid.</p>
+      </div>
+
+      <div class="card">
+        <h3>6. Health Risk Heatmap Generation</h3>
+        <p class="algo">Algorithm: K-Means Clustering</p>
+        <p class="desc">Cluster disease incidents to identify medical risk hotspots.</p>
+      </div>
+
+      <div class="card">
+        <h3>7. Smart Irrigation Scheduling</h3>
+        <p class="algo">Algorithm: Greedy / DP</p>
+        <p class="desc">Optimize water usage for parks and green zones.</p>
+      </div>
+
+      <div class="card">
+        <h3>8. CO₂ Offset Plantation Optimization</h3>
+        <p class="algo">Algorithm: Knapsack</p>
+        <p class="desc">Maximize pollution reduction through trees within land limits.</p>
+      </div>
+
+      <div class="card">
+        <h3>9. Crime Hotspot Detection</h3>
+        <p class="algo">Algorithm: Graph Centrality + Clustering</p>
+        <p class="desc">Identify high-crime zones and generate patrol loops.</p>
+      </div>
+
+      <div class="card">
+        <h3>10. Streetlight Fault Detection</h3>
+        <p class="algo">Algorithm: Graph Traversal + Anomaly Check</p>
+        <p class="desc">Detect faulty streetlights using connected sensor data.</p>
+      </div>
+
+    </div>
+
+    <!-- BOTTOM BACK BUTTON -->
+    <center>
+      <a class="back-btn" href="index.html">⬅ Back to Home</a>
+    </center>
+
+  </div>
+
+  <footer>
+    © 2024 Swyambu Boli – Portfolio
+  </footer>
+
+</body>
+</html>
